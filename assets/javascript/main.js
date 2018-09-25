@@ -10,6 +10,9 @@ var search = ['Penguins', 'Elephants', 'Dolphins']
 //  ============================================
 $(document).ready(function (){
     
+    function init() {
+        $('addedButtons').empty
+    }
 
 
     // Testing / Debugging
@@ -17,5 +20,6 @@ $(document).ready(function (){
     
     // Main Process
     //  ============================================
+    init()
 
 });
