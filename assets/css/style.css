@@ -21,3 +21,19 @@ body {
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
 }
+
+#gifBody {
+    background-color: rgba(117, 216, 255, 0.75);
+    border: 5px solid black;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 2.5% 15%;
+    /* padding: 15px 0; */
+    flex: 1;
+    /* left: -20%; */
+    border-radius: 25px;
+}

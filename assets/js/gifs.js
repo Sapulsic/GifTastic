@@ -2,7 +2,9 @@
 //  ============================================
 // Arrays and Variables for initiating Data
 
-var search = ['Penguins', 'Elephants', 'Dolphins']
+var search = ['Penguins', 'Elephants', 'Dolphins'];
+var searches = $('#searches');
+var addedButtons = $('addedButtons');
 
 
 
@@ -14,20 +16,24 @@ $(document).ready(function (){
         event.preventDefault();
         event.stopPropagation();
         return false;
-    };
+    }
 
-    function init(search, addClass) {
+    function init() {
         $('searchBody').empty();
         for (let i = 0; i < search.length; i++) {
-            var addedButtons = $('<button>');
-            addedButtons.addClass(addClass).attr("data-type", search[i]).text(search[i]);
-            $('#addedButtons').append(addedButtons);
+            let addedGif = $('<button>');
+            addedGif.addClass("gifButton")
+            addedGif.attr("data-animal", search[i])
+            addedGif.text(search[i]);
+            $('#addedButtons').append(addedGif);
         }
     };
 
+    
+
     $('#addedButtons').on('click', function() {
-        var animal = $(this).attr('data-animal');
-        var queryURL = 'https://api.giphy.com/v1/gifs/search?&q=' + animal + '&limit=100&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
+        let animal = $(this).attr('data-animal');
+        let queryURL = 'https://api.giphy.com/v1/gifs/random?&q=' + animal + '&limit=100&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
     
         $.ajax({
             url: queryURL,
@@ -35,16 +41,17 @@ $(document).ready(function (){
         }).then(function(response) {
             console.log(queryURL);
             console.log(response);
-            var results = response.data;
+
+            let results = response.data;
             for (let i = 0; i < results.length; i++) {
-                var animalDiv = $('<div>')
-                var p = $('<p>').text("Rating: " + results[i].rating);
-                var animalImage = $('<img>');
+                let animalDiv = $('<div>')
+                let p = $('<p>').text("Rating: " + results[i].rating);
+                let animalImage = $('<img>');
                 animalImage.attr('src', results[i].images.fixed_height.url);
                 animalDiv.append(p);
                 animalDiv.append(animalImage);
 
-                $('searches').prepend(animalDiv);
+                $('#searches').prepend(animalDiv);
             }
         });
 
