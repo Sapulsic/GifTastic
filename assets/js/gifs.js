@@ -12,11 +12,11 @@ let addedButtons = $('addedButtons');
 //  ============================================
 $(document).ready(function (){
     
-    window.oncontextmenu = function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-    }
+    // window.oncontextmenu = function(event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     return false;
+    // }
 
     function init() {
         debugger;
@@ -38,10 +38,10 @@ $(document).ready(function (){
     });
     
 
-    $('#addedButtons').on('click', function() {
+    $("#addedButtons").on('click', function() {
         $('searches').empty();
         let animal = $(this).data("animal");
-        let queryURL = 'https://api.giphy.com/v1/gifs/random?&q=' + animal + '&limit=100&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
+        let queryURL = 'https://api.giphy.com/v1/gifs/search?&q=' + animal + '&limit=100&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
     
         $.ajax({
             url: queryURL,
