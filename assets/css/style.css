@@ -45,7 +45,7 @@ body {
     position: relative;
     flex-direction: row-reverse;
     /* justify-content: space-around; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     text-align: center;
     margin: 2.5% 10%;
     /* padding: 15px 0; */
@@ -61,12 +61,14 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     font-size: 1.25em;
-    margin: 15% 15% 0;
+    margin: 15% 5% 0;
 }
 
 #gifBody #searchBar #searchForm {
     font-size: 1.25em;
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #gifBody button, input {
@@ -89,9 +91,9 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 50%;
+    /* width: 50%; */
     font-size: 1.5em;
-    top: -12.55%;
+    /* top: -12.55%; */
     overflow: hidden;
     position: relative;
     padding: 10px;
