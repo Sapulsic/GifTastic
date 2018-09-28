@@ -2,7 +2,7 @@
 //  ============================================
 // Arrays and Variables for initiating Data
 
-let search = ['Neo', 'Morheus', "Trinity",'The Matrix'];
+let search = ['Neo', 'Morheus', "Agent Smith",'The Matrix'];
 let searches = $('#searches');
 let addedButtons = $('#addedButtons');
 
