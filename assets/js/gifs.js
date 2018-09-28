@@ -40,10 +40,10 @@ let addedButtons = $('#addedButtons');
     });
     
 
-    addedButtons.on('click', function() {
+    $(document).on('click', '.gifButton', function () {
         // debugger;
         let animal = $(this).attr("data-animal");
-        let queryURL = 'https://api.giphy.com/v1/gifs/search?&q=' + animal + '&limit=100&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
+        let queryURL = 'https://api.giphy.com/v1/gifs/search?&q=' + animal + '&limit=10&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
         
         $.ajax({
             url: queryURL,
