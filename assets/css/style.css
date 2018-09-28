@@ -8,7 +8,7 @@
 
 html, body {
     min-height: 100vh;
-    background: url() no-repeat center center fixed; 
+    background: url(../images/Neo.mp4) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,20 +20,85 @@ body {
     /* left: 10%; */
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
+    color:rgb(6, 90, 31);
+
 }
 
+#myVideo {
+    position: fixed;
+    /* min-width: 100%;  */
+    min-height: 100vh;
+    left: -10%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+
 #gifBody {
-    background-color: rgba(117, 216, 255, 0.75);
-    border: 5px solid black;
+    background-color: rgba(12, 12, 12, 0.80);
+    border: 5px solid rgb(6, 90, 31);
     display: flex;
     position: relative;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row-reverse;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
     text-align: center;
-    margin: 2.5% 15%;
+    margin: 2.5% 10%;
     /* padding: 15px 0; */
     flex: 1;
     /* left: -20%; */
     border-radius: 25px;
+    font-family: "Andale Mono" , AndaleMono ,monospace; 
+}
+
+
+#gifBody #searchBar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.25em;
+    margin: 15% 15% 0;
+}
+
+#gifBody #searchBar #searchForm {
+    font-size: 1.25em;
+
+}
+
+#gifBody button, input {
+    background-color: black;
+    border: 2px solid rgb(6, 90, 31);
+    color: rgb(6, 90, 31);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+}
+
+#gifbBody #searchBody {
+    display: flex;
+    width: 50%;
+    padding: 15%;
+    margin: 0 0 0 5%;
+}
+
+#gifBody #searchBody #searches {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    font-size: 1.5em;
+    top: -12.55%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
+
+#gifBody #searchBody #searches div img {
+    margin: 5px;
+    border-radius: 10px;
+    border: 5px solid black;
 }

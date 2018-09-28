@@ -2,7 +2,7 @@
 //  ============================================
 // Arrays and Variables for initiating Data
 
-let search = ['Penguins', 'Elephants', 'Dolphins'];
+let search = ['Neo', 'Morheus', "Trinity",'The Matrix'];
 let searches = $('#searches');
 let addedButtons = $('#addedButtons');
 
@@ -43,7 +43,7 @@ let addedButtons = $('#addedButtons');
     $(document).on('click', '.gifButton', function () {
         // debugger;
         let animal = $(this).attr("data-animal");
-        let queryURL = 'https://api.giphy.com/v1/gifs/search?&q=' + animal + '&limit=10&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
+        let queryURL = 'https://api.giphy.com/v1/gifs/search?&q=' + animal + '&limit=10&lang=en&api_key=xiPtoJ3FAubesUNvmUFWvCSa2k2KWNCw';
         
         $.ajax({
             url: queryURL,
@@ -58,6 +58,7 @@ let addedButtons = $('#addedButtons');
             let results = response.data;
             for (let i = 0; i < results.length; i++) {
                 let animalDiv = $('<div>')
+                animalDiv.addClass('gifs')
                 let p = $('<p>').text("Rating: " + results[i].rating);
                 let animalImage = $('<img>');
                 animalImage.attr('src', results[i].images.fixed_height.url);

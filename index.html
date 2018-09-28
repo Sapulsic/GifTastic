@@ -3,30 +3,35 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>GifTastic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
     
+    <video autoplay muted loop id="myVideo">
+        <source src="assets/images/Morpheous.mp4" type="video/mp4">
+    </video>
+
     <div id="gifBody">
 
         <div id="searchBar">
             <form id="searchForm">
                 <label for="searchLabel">Add a New Search Here!</label>
                 <br>
+                <br>
                 <input type="text" id="searchInput">
                 <input type="submit" value="Submit" id="submitButton">
             </form>
+            
+            <br>
+            
+            <div id="searchButtons">
+                <div id="addedButtons"></div>
+            </div>
         </div>
-        
-        <br>
-        
-        <div id="searchButtons">
-            <div id="addedButtons"></div>
-        </div>
-        
+            
         <br>
         <br>
         
