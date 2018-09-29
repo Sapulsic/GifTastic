@@ -44,8 +44,9 @@ body {
     display: flex;
     position: relative;
     flex-direction: row-reverse;
-    /* justify-content: space-around; */
-    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
     text-align: center;
     margin: 2.5% 10%;
     /* padding: 15px 0; */
@@ -62,6 +63,7 @@ body {
     flex-wrap: wrap;
     font-size: 1.25em;
     margin: 15% 5% 0;
+    /* width: 30%; */
 }
 
 #gifBody #searchBar #searchForm {
@@ -87,16 +89,16 @@ body {
     margin: 0 0 0 5%;
 }
 
-#gifBody #searchBody #searches {
+#gifBody #searchBody  {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     /* width: 50%; */
     font-size: 1.5em;
     /* top: -12.55%; */
-    overflow: hidden;
-    position: relative;
-    padding: 10px;
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* padding: 10px; */
 }
 
 #gifBody #searchBody #searches div img {
