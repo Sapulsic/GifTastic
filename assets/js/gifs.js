@@ -10,7 +10,7 @@ let addedButtons = $('#addedButtons');
 
 // Functions
 //  ============================================
-// $(document).ready(function (){
+$(document).ready(function (){
     
     // window.oncontextmenu = function(event) {
     //     event.preventDefault();
@@ -63,6 +63,7 @@ let addedButtons = $('#addedButtons');
                 let animalImage = $('<img>');
                 animalImage.addClass('gifImage');
                 animalImage.attr('src', results[i].images.fixed_height.url);
+                animalImage.attr('data-state', "still");
                 animalDiv.append(p);
                 animalDiv.append(animalImage);
 
@@ -70,11 +71,15 @@ let addedButtons = $('#addedButtons');
             }
         });
 
+        
+        
+    });
         $('#clearButton').on('click', function() {
             searches.empty()
         })
 
-        $(".gifImage").on("click", function() {
+        $("#gifImage").on("click", function() {
+            debugger;
             var state = $(this).attr("data-state");
             if (state === "still") {
                 $(this).attr("src", $(this).attr("data-animate"));
@@ -84,9 +89,6 @@ let addedButtons = $('#addedButtons');
                 $(this).attr("data-state", "still");
             }
         });
-
-
-    });
             
     // Testing / Debugging
     console.log('test');
@@ -95,4 +97,4 @@ let addedButtons = $('#addedButtons');
     //  ============================================
     init()
 
-// });
+});
