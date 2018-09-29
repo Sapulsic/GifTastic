@@ -61,6 +61,7 @@ let addedButtons = $('#addedButtons');
                 animalDiv.addClass('gifs')
                 let p = $('<p>').text("Rating: " + results[i].rating);
                 let animalImage = $('<img>');
+                animalImage.addClass('gifImage');
                 animalImage.attr('src', results[i].images.fixed_height.url);
                 animalDiv.append(p);
                 animalDiv.append(animalImage);
@@ -69,7 +70,20 @@ let addedButtons = $('#addedButtons');
             }
         });
 
-    
+        $('#clearButton').on('click', function() {
+            searches.empty()
+        })
+
+        $(".gifImage").on("click", function() {
+            var state = $(this).attr("data-state");
+            if (state === "still") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
+        });
 
 
     });
