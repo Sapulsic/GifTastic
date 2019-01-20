@@ -4,8 +4,8 @@
 
 #### Check it out [here](https://sapulsic.github.io/GifTastic/).
 
-![screenshot](public/assets/images/GifTastic1.png)
-![screenshot](public/assets/images/GifTastic2.png)
+![screenshot](/assets/images/GifTastic1.png)
+![screenshot](/assets/images/GifTastic2.png)
 
 
 ## Technologies Used
